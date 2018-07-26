@@ -1,0 +1,4 @@
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\CRSMSOnlineWebTest\bin\CRSMSOnlineWebTest.dll
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\CRSMSOnlineWebTest\bin\CRSMSOnlineWebTest.pdb
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\CRSMSOnlineWebTest\obj\Debug\CRSMSOnlineWebTest.dll
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\CRSMSOnlineWebTest\obj\Debug\CRSMSOnlineWebTest.pdb

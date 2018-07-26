@@ -1,0 +1,5 @@
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\SalesOrderWebSvc\bin\SalesOrderWebSvc.dll
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\SalesOrderWebSvc\bin\SalesOrderWebSvc.pdb
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\SalesOrderWebSvc\obj\Debug\SalesOrderWebSvc.dll
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\SalesOrderWebSvc\obj\Debug\SalesOrderWebSvc.pdb
+C:\Users\MIGK\Documents\Visual Studio 2010\Projects\New Project Folder\SalesOrderWebSvc\SalesOrderWebSvc\obj\Debug\SalesOrderWebSvc.csprojResolveAssemblyReference.cache

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SOWebSvc" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59805/SOWebSvc.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59805/SOWebSvc.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59805/SOWebSvc.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SalesOrderWebSvc" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISOWebSvc_GetInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetRentals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentals" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetRentals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetSales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSales" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetSales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_SaveCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_SaveCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_UpdateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_UpdateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetTransactionInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetTransactionInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetInfoByRefNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoByRefNum" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetInfoByRefNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoByRefNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetCustomerOfTransId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerOfTransId" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetCustomerOfTransId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerOfTransIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetProductOfTransId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductOfTransId" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetProductOfTransId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductOfTransIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_SaveTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_SaveTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_UpdateTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_UpdateTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetOrderedProductInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderedProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_GetOrderedProductInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderedProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_SaveOrderedProductInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrderedProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_SaveOrderedProductInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrderedProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_UpdateOrderedProductInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderedProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISOWebSvc_UpdateOrderedProductInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderedProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISOWebSvc">
+    <wsdl:operation name="GetInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetInfo" message="tns:ISOWebSvc_GetInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetInfoResponse" message="tns:ISOWebSvc_GetInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRentals">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetRentals" message="tns:ISOWebSvc_GetRentals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetRentalsResponse" message="tns:ISOWebSvc_GetRentals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSales">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetSales" message="tns:ISOWebSvc_GetSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetSalesResponse" message="tns:ISOWebSvc_GetSales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetOrders" message="tns:ISOWebSvc_GetOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetOrdersResponse" message="tns:ISOWebSvc_GetOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/SaveCustomer" message="tns:ISOWebSvc_SaveCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/SaveCustomerResponse" message="tns:ISOWebSvc_SaveCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/UpdateCustomer" message="tns:ISOWebSvc_UpdateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/UpdateCustomerResponse" message="tns:ISOWebSvc_UpdateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetTransactionInfo" message="tns:ISOWebSvc_GetTransactionInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetTransactionInfoResponse" message="tns:ISOWebSvc_GetTransactionInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoByRefNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetInfoByRefNum" message="tns:ISOWebSvc_GetInfoByRefNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetInfoByRefNumResponse" message="tns:ISOWebSvc_GetInfoByRefNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOfTransId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetCustomerOfTransId" message="tns:ISOWebSvc_GetCustomerOfTransId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetCustomerOfTransIdResponse" message="tns:ISOWebSvc_GetCustomerOfTransId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductOfTransId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetProductOfTransId" message="tns:ISOWebSvc_GetProductOfTransId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetProductOfTransIdResponse" message="tns:ISOWebSvc_GetProductOfTransId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/SaveTransaction" message="tns:ISOWebSvc_SaveTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/SaveTransactionResponse" message="tns:ISOWebSvc_SaveTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/UpdateTransaction" message="tns:ISOWebSvc_UpdateTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/UpdateTransactionResponse" message="tns:ISOWebSvc_UpdateTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderedProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/GetOrderedProductInfo" message="tns:ISOWebSvc_GetOrderedProductInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/GetOrderedProductInfoResponse" message="tns:ISOWebSvc_GetOrderedProductInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrderedProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/SaveOrderedProductInfo" message="tns:ISOWebSvc_SaveOrderedProductInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/SaveOrderedProductInfoResponse" message="tns:ISOWebSvc_SaveOrderedProductInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderedProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISOWebSvc/UpdateOrderedProductInfo" message="tns:ISOWebSvc_UpdateOrderedProductInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISOWebSvc/UpdateOrderedProductInfoResponse" message="tns:ISOWebSvc_UpdateOrderedProductInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISOWebSvc" type="tns:ISOWebSvc">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInfo">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRentals">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetRentals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSales">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/SaveCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionInfo">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetTransactionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoByRefNum">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetInfoByRefNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOfTransId">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetCustomerOfTransId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductOfTransId">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetProductOfTransId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransaction">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/SaveTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/UpdateTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderedProductInfo">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/GetOrderedProductInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrderedProductInfo">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/SaveOrderedProductInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderedProductInfo">
+      <soap:operation soapAction="http://tempuri.org/ISOWebSvc/UpdateOrderedProductInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SOWebSvc">
+    <wsdl:port name="BasicHttpBinding_ISOWebSvc" binding="tns:BasicHttpBinding_ISOWebSvc">
+      <soap:address location="http://localhost:59805/SOWebSvc.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
